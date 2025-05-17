@@ -74,13 +74,12 @@ BikeStore-SQL-DB/
 
 5. **Verify**  
    - Refresh **Tables** under **BikeStore** in Object Explorer.  
-   - To view the ER diagram: move or rename your `1.png` into `diagrams/er-diagram.png` then in SSMS go to Database Diagrams → New Diagram → add all tables.
-
+   
 ---
 
 ## 📊 ER Diagram
 
-![ER Diagram](diagrams/er-diagram.png)
+![ER Diagram]([diagrams/er-diagram.png](https://github.com/mohamedhosam4/BikeStore-SQL-DB/blob/main/1.png))
 
 *(This is the screenshot you uploaded as `1.png`.)*
 
