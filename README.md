@@ -1,7 +1,7 @@
 # BikeStore-SQL-DB
 
 A simple SQL Server database schema for a bike store.  
-This repository contains everything you need to create the **BikeStore** database: SQL scripts, an ER-diagram, and usage instructions.
+This repository contains everything you need to create the **BikeStore** database: instructions, SQL scripts for the latter tables, and an ER-diagram.
 
 ---
 
@@ -13,28 +13,14 @@ BikeStore-SQL-DB/
 ├─ diagrams/
 │  └─ er-diagram.png
 └─ sql/
-   ├─ 01_create_brands_categories_products.sql
    └─ 02_create_customers_orders_stores_staff.sql
 ```
 
+> **Note:** The initial catalog tables (`brands`, `categories`, `products`) were created manually using SQL Server Management Studio's Object Explorer.  
+> The provided SQL script automates creation of the remaining tables and relationships.
+
 - **`diagrams/er-diagram.png`**  
   An Entity–Relationship diagram showing all tables and their primary/foreign key relationships.
-
-- **`sql/01_create_brands_categories_products.sql`**  
-  Creates the core catalog tables:
-  - `brands`  
-    - `brand_id` (PK)  
-    - `brand_name`
-  - `categories`  
-    - `category_id` (PK)  
-    - `category_name`
-  - `products`  
-    - `product_id` (PK)  
-    - `product_name`  
-    - `brand_id` (FK → `brands.brand_id`)  
-    - `category_id` (FK → `categories.category_id`)  
-    - `model_year`  
-    - `list_price`
 
 - **`sql/02_create_customers_orders_stores_staff.sql`**  
   Creates the sales-side tables:
@@ -82,12 +68,17 @@ BikeStore-SQL-DB/
    GO
    ```
 
-3. **Execute the SQL scripts** (in order)  
-   1. Open **sql/01_create_brands_categories_products.sql** and click **Execute**.  
-   2. Open **sql/02_create_customers_orders_stores_staff.sql** and click **Execute**.
+3. **Manual creation of initial tables**  
+   Using SSMS Object Explorer, right-click **Tables** → **New** → **Table...**, then design and save:
+   - **brands** (`brand_id` PK, `brand_name`)
+   - **categories** (`category_id` PK, `category_name`)
+   - **products** (`product_id` PK, `product_name`, `brand_id` FK, `category_id` FK, `model_year`, `list_price`)
 
-4. **Verify**  
-   - In **Object Explorer**, refresh and expand **Databases → BikeStore → Tables** to see all seven tables.  
+4. **Execute the SQL script for remaining tables**  
+   Open **sql/02_create_customers_orders_stores_staff.sql** and click **Execute**.
+
+5. **Verify**  
+   - In **Object Explorer**, refresh and expand **Tables** to see all tables.  
    - To view the diagram, go to **Database Diagrams**, create a new diagram, and add all tables. You should see the ER-diagram match the one in this repo.
 
 ---
