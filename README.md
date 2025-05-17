@@ -1,7 +1,7 @@
 # BikeStore-SQL-DB
 
 A simple SQL Server database schema for a bike store.  
-This repository contains everything you need to create the **BikeStore** database: instructions, your manual tables setup, the SQL script for the rest, and an ER-diagram.
+This repository contains everything you need to create the **BikeStore** database: instructions, your manual tables setup, the SQL script, and an ER-diagram.
 
 ---
 
@@ -12,13 +12,12 @@ BikeStore-SQL-DB/
 ├─ README.md
 ├─ diagrams/
 │  └─ er-diagram.png      ← rename/move your existing 1.png here
-└─ sql/
-   └─ 02_create_customers_orders_stores_staff.sql
+└─ BikeStore-SQL-DB.sql   ← single SQL script for remaining tables
 ```
 
 > **Note:**  
 > 1. The initial catalog tables (`brands`, `categories`, `products`) were created **manually** in SSMS via Object Explorer (with PKs and FKs).  
-> 2. The provided script in `sql/02_create_customers_orders_stores_staff.sql` automates creation of the remaining tables and their relationships.
+> 2. The provided script `BikeStore-SQL-DB.sql` automates creation of the remaining tables and their relationships.
 
 ---
 
@@ -66,8 +65,8 @@ BikeStore-SQL-DB/
    - **categories** (`category_id` PK, `category_name`)
    - **products** (`product_id` PK, `product_name`, `brand_id` FK, `category_id` FK, `model_year`, `list_price`)
 
-4. **Execute the remaining script**  
-   Open `sql/02_create_customers_orders_stores_staff.sql` and click **Execute** to create:
+4. **Execute the SQL script**  
+   Open and execute **BikeStore-SQL-DB.sql** to create:
    - `customers`
    - `stores`
    - `staff`
