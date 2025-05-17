@@ -83,21 +83,6 @@ BikeStore-SQL-DB/
 
 ---
 
-## 🤝 Contributing
-
-1. Fork the repo  
-2. Create a branch:  
-   ```bash
-   git checkout -b feature/YourFeatureName
-   ```
-3. Commit your changes:  
-   ```bash
-   git commit -m "Add awesome feature"
-   ```
-4. Push and open a Pull Request.
-
----
-
 ## 📜 License
 
 This project is licensed under the MIT License.
