@@ -72,14 +72,12 @@ BikeStore-SQL-DB/
    - `staff`
    - `orders`
 
-5. **Verify**  
-   - Refresh **Tables** under **BikeStore** in Object Explorer.  
-   
+
 ---
 
 ## 📊 ER Diagram
 
-![ER Diagram]([diagrams/er-diagram.png](https://github.com/mohamedhosam4/BikeStore-SQL-DB/blob/main/1.png))
+![ER Diagram](https://github.com/mohamedhosam4/BikeStore-SQL-DB/raw/main/1.png)
 
 *(This is the screenshot you uploaded as `1.png`.)*
 
